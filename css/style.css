@@ -12,9 +12,21 @@ i.fa {
     font-size: 30px;
     margin-right: 10px;
 }
+@keyframes slide {
+0% {
+    background-position: 0% 0%;
+}
+50% {
+    background-position: 100% 0%;
+}
+100% {
+    background-position: 0% 0%;
+}
+}
 .main {
     background-image: url(../img/background__main.jpg);
     background-repeat: repeat-x;
+    background-size: cover;
     animation: slide 90s linear infinite;
 }
 .app {
@@ -24,25 +36,14 @@ i.fa {
     justify-content: space-between;
     overflow: hidden;
 }
-@keyframes slide {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 0%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
 .app__header {
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     border-bottom: 7px solid #fdb54d;
     min-height: 247px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 10px;
 }
 .app__logo {
     padding: 20px 0;
@@ -70,7 +71,7 @@ i.fa {
     margin: 0 auto;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
+    font-style: 16px;
     line-height: 20px;
     color: #fff;
     text-transform: uppercase;
@@ -129,7 +130,6 @@ i.fa {
 .app__card-text {
     font-size: 22px;
     margin-bottom: 10px;
-
 }
 .app__card-count {
     font-size: 18px;
@@ -137,7 +137,7 @@ i.fa {
 .app__body-middle {
     margin-bottom: 15px;
 }
-.app__result {
+.app_result {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,7 +146,7 @@ i.fa {
     background-color: rgba(25,121,211,0.8);
     margin-bottom: 7px;
 }
-.app__result:last-child {
+.app_result:last-child {
     margin-bottom: 0;
 }
 i.fa-star {
@@ -154,7 +154,6 @@ i.fa-star {
     font-size: 15px;
     margin-bottom: 3px;
 }
-
 .app__result-name {
     font-size: 18px;
     margin-left: auto;
@@ -169,7 +168,7 @@ i.fa-star {
     box-shadow: none;
     border-radius: 50%;
 }
-.btn__achivment {
+.btn_achivment {
     background-color: rgba(0,0,0,0.5);
     border: 5px solid rgba(1,88,154,0.5);
 }
@@ -220,29 +219,36 @@ i.fa-star {
 }
 .app.results[data-race="zerg"] {
     background-image: url(../img/zerg_bg.jpg);
+    background-size: cover;
 }
 .app.results[data-race="primal"] {
     background-image: url(../img/primal_bg.jpg);
+    background-size: cover;
 }
 .app.results[data-race="terran"] {
     background-image: url(../img/terran_bg.jpg);
-}
+    background-size: cover;
+    }
 .app.results[data-race="infested"] {
     background-image: url(../img/infested_bg.jpg);
+    background-size: cover;
 }
 .app.results[data-race="protoss"] {
     background-image: url(../img/protoss_bg.jpg);
+    background-size: cover;
 }
 .app.results[data-race="taldarim"] {
     background-image: url(../img/taldarim_bg.jpg);
+    background-size: cover;
     background-position: 40% 0;
 }
 .app.results[data-race="hybrid"] {
     background-image: url(../img/hybrid_bg.jpg);
+    background-size: cover;
     background-position: 45% 0;
 }
 .btn__zerg {
-    background-color: #762877;
+    background-color: #762877;  
 }
 .btn__primal {
     background-color: #56a725;
@@ -264,5 +270,3 @@ i.fa-star {
 .btn__hybrid {
     background-color: #fc7654;
 }
-
-
